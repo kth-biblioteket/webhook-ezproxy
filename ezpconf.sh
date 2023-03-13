@@ -22,9 +22,9 @@ chown root:root $EZPROXYPATH/$SHIBFILE
 if ! git pull origin main | grep -q 'Already up to date'; then
         # Uppdaterades config-filen?
         if [ $(stat -c %Y $EZPROXYPATH/$CONFIGFILE) -gt $current_timestamp ]; then
-                echo "$(date) - config.txt was updated from repository" >> "$EZPROXYPATH$LOGFILE"
+                echo "$(date) - config.txt was updated from repository" >> "$EZPROXYPATH/$LOGFILE"
         else
-                echo "$(date) - config.txt was NOT updated from repository" >> "$EZPROXYPATH$LOGFILE"
+                echo "$(date) - config.txt was NOT updated from repository" >> "$EZPROXYPATH/$LOGFILE"
         fi
 fi
 # återställ ägarskap
