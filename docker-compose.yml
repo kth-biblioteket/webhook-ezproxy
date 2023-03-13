@@ -1,0 +1,11 @@
+services:
+  webhook-kthb:
+    container_name: webhook-kthb
+    image: ghcr.io/kth-biblioteket/webhook-ezproxy:main
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 9000:9000
+    volumes:
+      - /usr/local/ezproxy:/usr/local/ezproxy
