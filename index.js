@@ -78,7 +78,7 @@ function validateSignature(body, secret, signature) {
  * Funktion som svarar på vanlig "get"
  */
 apiRoutes.get('/', function (req, res, next) {
-    res.end("KTH Biblioteket Webhook för EZProxy")
+    res.end("KTH Biblioteket Webhook för EZProxy", 'utf-8')
 });
 
 /**
