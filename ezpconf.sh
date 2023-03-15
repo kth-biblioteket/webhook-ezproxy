@@ -23,7 +23,7 @@ current_timestamp=$(stat -c %Y ./$CONFIGFILE)
 if ! git pull origin main | grep -q 'Already up to date'; then
         # Uppdaterades config-filen?
         if [ $(stat -c %Y ./$CONFIGFILE) -gt $current_timestamp ]; then
-                cp ./$CONFIGFILE $EZPROXYPATH/$CONFIGFILE
+                cat ./$CONFIGFILE > $EZPROXYPATH/$CONFIGFILE
                 echo "$(date) - $EZPROXYPATH/$CONFIGFILE was updated from repository" >> "./$LOGFILE"
         else
                 echo "$(date) - $EZPROXYPATH/$CONFIGFILE was NOT updated from repository" >> "./$LOGFILE"
