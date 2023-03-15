@@ -10,7 +10,7 @@ SHIBFILE=${5}
 set -e
 
 # Sökväg till EZproxy-tjänsten
-cd $EZPROXYPATH
+cd $REPOPATH
 
 # chmod 755 ezproxy
 
