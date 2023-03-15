@@ -97,7 +97,7 @@ apiRoutes.post('/', function (req, res, next) {
     switch (action) {
         case process.env.ACTIONEVENT:
             console.log("Starting...")
-            exec(`${process.env.GITHUB_DEPLOY_SCRIPT} ${process.env.LOGFILE} ${process.env.EZPROXYPATH} ${process.env.CONFIGFILE} ${process.env.SHIBFILE}`, (error, stdout, stderr) => {
+            exec(`${process.env.GITHUB_DEPLOY_SCRIPT} ${process.env.LOGFILE} ${process.env.REPOPATH} ${process.env.EZPROXYPATH} ${process.env.CONFIGFILE} ${process.env.SHIBFILE}`, (error, stdout, stderr) => {
                 if (error) {
                     console.error(`exec error: ${error}`);
                     res.status(401).send({ errorMessage: error });
