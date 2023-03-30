@@ -1,7 +1,8 @@
 FROM node:16
 
 # Installera git
-RUN apk add --no-cache git
+RUN apt-get update && \
+    apt-get install -y git systemd
 
 WORKDIR /app
 
