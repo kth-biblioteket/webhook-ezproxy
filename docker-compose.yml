@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   webhook-kthb:
-    container_name: webhook-kthb
+    container_name: webhook-ezproxy
     image: ghcr.io/kth-biblioteket/webhook-ezproxy:main
     restart: always
     env_file:
