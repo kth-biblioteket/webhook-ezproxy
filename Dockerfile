@@ -1,8 +1,7 @@
-FROM node:16
+FROM node:16-alpine
 
 # Installera git
-RUN apt-get update && \
-    apt-get install -y git systemd
+RUN apk add --no-cache git
 
 WORKDIR /app
 
